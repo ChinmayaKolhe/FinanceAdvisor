@@ -94,8 +94,6 @@ mvn clean install
 
 # Run the application
 mvn spring-boot:run
-# OR
-java -jar target/finance-advisor-backend-1.0.0.jar
 ```
 
 Backend starts at: `http://localhost:8080`
@@ -121,10 +119,6 @@ cd frontend
 
 # Install dependencies
 npm install
-
-# Create .env file
-cp .env.example .env
-# Edit .env: REACT_APP_API_URL=http://localhost:8080
 
 # Start development server
 npm start
@@ -205,9 +199,9 @@ npm run build
   "monthlyTrends": [
     { "year": 2024, "month": 3, "monthName": "Mar 2024", "income": 50000, "expense": 35000, "savings": 15000 }
   ],
-  "insights": ["✅ Great job! Your savings rate of 30.0% meets the recommended 20% target."],
-  "warnings": ["📊 SHOPPING accounts for 34.3% of your spending. Consider reducing shopping expenses."],
-  "suggestions": ["💡 Try to limit SHOPPING spending to under 30% of total expenses."]
+  "insights": ["Great job! Your savings rate of 30.0% meets the recommended 20% target."],
+  "warnings": ["SHOPPING accounts for 34.3% of your spending. Consider reducing shopping expenses."],
+  "suggestions": ["Try to limit SHOPPING spending to under 30% of total expenses."]
 }
 ```
 
@@ -234,10 +228,10 @@ npm run build
 
 | Rule | Condition | Output |
 |------|-----------|--------|
-| Overspending | `expense > income` | ⚠️ Warning with deficit amount |
-| Category Overload | `category > 30% of spending` | 📊 Category reduction suggestion |
-| Low Savings | `savings < 20% of income` | 💰 Savings plan + target amount |
-| Good Savings | `savings >= 20%` | ✅ Positive reinforcement |
+| Overspending | `expense > income` |  Warning with deficit amount |
+| Category Overload | `category > 30% of spending` |  Category reduction suggestion |
+| Low Savings | `savings < 20% of income` |  Savings plan + target amount |
+| Good Savings | `savings >= 20%` |  Positive reinforcement |
 
 ---
 
@@ -299,7 +293,3 @@ Tests cover: TransactionService CRUD, AnalyticsService AI rules, access control.
 | ORM | Spring Data MongoDB |
 | Frontend | React 18, React Router v6 |
 | HTTP | Axios |
-| Charts | Recharts |
-| Notifications | React Hot Toast |
-| Icons | Lucide React |
-| Deployment | Render (BE) + Netlify (FE) |
