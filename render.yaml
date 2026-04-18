@@ -1,9 +1,7 @@
 services:
   - type: web
     name: finance-advisor-backend
-    runtime: java
-    buildCommand: cd backend && mvn clean install -DskipTests
-    startCommand: cd backend && java -jar target/finance-advisor-backend-1.0.0.jar
+    runtime: docker
     envVars:
       - key: SPRING_DATA_MONGODB_URI
         value: mongodb+srv://finance:finance@financeadvisor.p0euqix.mongodb.net/financeAdvisorDB?retryWrites=true&w=majority&appName=financeAdvisor
