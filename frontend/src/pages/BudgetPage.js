@@ -25,6 +25,7 @@ export default function BudgetPage() {
     budgetAPI.getByMonth(month, year).then(r => setBudgets(r.data)).finally(() => setLoading(false));
   };
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => { fetchBudgets(); }, [month, year]);
 
   const handleSubmit = async e => {

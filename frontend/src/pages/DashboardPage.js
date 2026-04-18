@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { analyticsAPI, transactionAPI } from '../services/api';
 import { useAuth } from '../context/AuthContext';
 import {
-  AreaChart, Area, BarChart, Bar, PieChart, Pie, Cell,
+  AreaChart, Area, PieChart, Pie, Cell,
   XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Legend
 } from 'recharts';
 import { TrendingUp, TrendingDown, DollarSign, PiggyBank, Plus, AlertTriangle, CheckCircle, Lightbulb } from 'lucide-react';
